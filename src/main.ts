@@ -1,5 +1,7 @@
 import './assets/main.css'
-import 'reset-css'
+import 'virtual:uno.css'
+import '@unocss/reset/tailwind.css'
+// import 'reset-css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
