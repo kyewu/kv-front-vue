@@ -14,6 +14,20 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyewu/kv-front-vue"
+  },
+  "keywords": [
+    "vue3.x",
+    "typescript",
+    "pinna",
+    "vite",
+    "UnoCSS",
+    "unplugin-vue-router"
+  ],
+  "author": "Kye",
+  "license": "MIT",
   "dependencies": {
     "@unocss/reset": "^0.54.2",
     "pinia": "^2.1.4",
