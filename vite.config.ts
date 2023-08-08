@@ -7,6 +7,8 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Components from 'unplugin-vue-components/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,7 +27,17 @@ export default defineConfig({
       ],
       imports: ['vue', VueRouterAutoImports, '@vueuse/core']
     }),
-    Components({})
+    Components({
+      resolvers: [
+        IconsResolver({
+          prefix: 'i'
+        })
+      ]
+    }),
+    Icons({
+      autoInstall: true,
+      defaultStyle: 'display: inline-block'
+    })
   ],
   resolve: {
     alias: {
