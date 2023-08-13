@@ -1,6 +1,6 @@
-import './assets/main.css'
-import 'virtual:uno.css'
 import '@unocss/reset/tailwind.css'
+import 'virtual:uno.css'
+import './assets/main.scss'
 // import 'reset-css'
 
 import { createApp } from 'vue'
