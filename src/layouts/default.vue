@@ -1,17 +1,17 @@
 <template>
-  <div class="flex flex-col" style="height: 100%">
-    <div class="header flex items-center">
-      <router-link to="/">Home</router-link>
-      <router-link to="/study">Study</router-link>
-      <router-link to="/about">About</router-link>
+  <div class="flex flex-col h-full">
+    <div class="fixed w-full top-0" :class="{ 'shadow-lg bg-black bg-opacity-30': y > 0 }">
+      <Menu />
     </div>
-
-    <main class="flex-1">
+    <main class="flex-1 mt-[40px]">
       <router-view></router-view>
     </main>
+    <div class="footer"></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { y } = useWindowScroll()
+</script>
 
 <style scoped></style>
