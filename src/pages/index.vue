@@ -1,10 +1,22 @@
 <template>
-  <div class="bg-blue">{{ title }}</div>
-  <Greeting />
+  <Swiper class="h-[400px]" :items="items" />
 </template>
 
 <script setup lang="ts">
-const title = ref('hello UnoCSS')
+import type { SwiperItemType } from '@/components/types'
+import dolphin from '@/assets/dolphin.jpg'
+
+const items = ref<SwiperItemType[]>([
+  {
+    image: dolphin
+  },
+  {
+    image: dolphin
+  },
+  {
+    image: dolphin
+  }
+])
 </script>
 
 <style scoped lang="scss"></style>

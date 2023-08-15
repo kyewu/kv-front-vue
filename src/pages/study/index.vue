@@ -1,10 +1,5 @@
-<template>
-  <div>study</div>
-  <h1>{{ title }}</h1>
-</template>
+<template></template>
 
-<script setup lang="ts">
-const title = ref('study')
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss"></style>
