@@ -43,6 +43,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.17.0
     version: 18.17.0
+  '@unocss/preset-icons':
+    specifier: ^0.55.2
+    version: 0.55.2
   '@unocss/preset-wind':
     specifier: ^0.55.0
     version: 0.55.0
@@ -2114,6 +2117,10 @@ packages:
     resolution: {integrity: sha512-TcTugpuhsv6OwMsP3iFIG8FVc9N5JzkojIGNAKF8I2WBftZ//3QcpEHiHc1mH3MlPYfJgUvCcT6/Gad55qmHzg==}
     dev: true
 
+  /@unocss/core@0.55.2:
+    resolution: {integrity: sha512-ZLEES8RDgWoK/vttUzl3PM2bZqL3HvhLgj8xdDa09Xw+JiTlR4c66s+hLn52oCoJTnT9lGsD2j7tTGN9ToSiTA==}
+    dev: true
+
   /@unocss/extractor-arbitrary-variants@0.55.0:
     resolution: {integrity: sha512-FCel+gJ3N8C/361yQ3gYTmbCjX3DXQ+LdxBiAawapbtTA4eXw55/f7cpiiWcHoouCRrWIEMOQN5DskAJvmMaTw==}
     dependencies:
@@ -2152,6 +2159,16 @@ packages:
     dependencies:
       '@iconify/utils': 2.1.7
       '@unocss/core': 0.55.0
+      ofetch: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@unocss/preset-icons@0.55.2:
+    resolution: {integrity: sha512-NK9LcTlBZv6zO8Qbu+VA9HblzYc5ebuFwaQMfQcYj2Z6dBOT27Ki41LY1qjEXzzMPXb44Q14Rlk0tJc8LtJIpQ==}
+    dependencies:
+      '@iconify/utils': 2.1.7
+      '@unocss/core': 0.55.2
       ofetch: 1.1.1
     transitivePeerDependencies:
       - supports-color
