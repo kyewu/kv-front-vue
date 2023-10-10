@@ -40,7 +40,9 @@ import type { SwiperItemType } from '@/components/types'
 import Card from '@/components/Card.vue'
 import bg from '@/assets/images/bg.png'
 import dolphin from '@/assets/dolphin.jpg'
+import { useThemeStore } from '../stores/useThemeStore'
 
+const store = useThemeStore()
 const items = ref<SwiperItemType[]>([
   {
     image: bg,
