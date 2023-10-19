@@ -11,7 +11,7 @@ import postcsspxtoviewport8plugin from 'postcss-px-to-viewport-8-plugin'
 
 import Layouts from 'vite-plugin-vue-layouts'
 import UnoCSS from 'unocss/vite'
-import Icons from 'unplugin-icons/vite'
+import Icons from 'unplugin-icons/vite' // import iconify
 
 import IconsResolver from 'unplugin-icons/resolver'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -61,6 +61,12 @@ export default defineConfig({
     UnoCSS(),
     AutoImport({
       dts: true,
+      resolvers: [
+        IconsResolver({
+          // handle icon, add prefix i
+          prefix: 'i'
+        })
+      ],
       eslintrc: {
         enabled: true
       },
@@ -70,11 +76,13 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/ // .md
       ],
+      // 自动导入below相关函数
       imports: ['vue', VueRouterAutoImports, '@vueuse/core', 'pinia']
     }),
     Components({
       resolvers: [
         IconsResolver({
+          // handle icon, add prefix i
           prefix: 'i'
         })
       ]
@@ -84,7 +92,7 @@ export default defineConfig({
       defaultLayout: 'default'
     }),
     Icons({
-      autoInstall: true,
+      autoInstall: true, // auto install icons
       defaultStyle: 'display: inline-block'
     }),
     VitePWA({

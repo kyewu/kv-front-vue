@@ -26,7 +26,7 @@
     <router-view></router-view>
     <div>
       <div class="mobile-hide">
-        <!-- <DefaultFooter icp="鄂ICP备19018123号-1"></DefaultFooter> -->
+        <DefaultFooter icp="豫ICP备19018139号-1"></DefaultFooter>
       </div>
       <div class="display-none mobile">
         <!-- <MobileNavbar></MobileNavbar> -->
