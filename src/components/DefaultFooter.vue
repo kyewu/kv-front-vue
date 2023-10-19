@@ -14,7 +14,7 @@
             <div class="i-ic:baseline-wechat mr-4 cursor-pointer"></div>
             <img
               class="display-none absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-100%] w-20 h-20 max-w-unset rounded group-hover:display-block"
-              src="@/assets/images/wechat.jpg"
+              :src="contacts.wechat || wechat"
               alt=""
             />
           </div>
@@ -22,7 +22,7 @@
             <div class="i-entypo-social:sina-weibo cursor-pointer"></div>
             <img
               class="display-none absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-100%] w-20 h-20 max-w-unset rounded group-hover:display-block"
-              src="@/assets/images/sina.jpg"
+              :src="contacts.sina || sina"
               alt=""
             />
           </div>
@@ -65,6 +65,8 @@
 </template>
 
 <script setup lang="ts">
+import wechat from '@/assets/images/wechat.jpg'
+import sina from '@/assets/images/sina.jpg'
 interface LinkType {
   title: string
   url: string
@@ -84,7 +86,6 @@ interface FootItem {
   links?: LinkType[]
   contacts?: ContactsType
 }
-
 withDefaults(defineProps<FootItem>(), {
   // set default value
   icp: '',
@@ -100,7 +101,8 @@ withDefaults(defineProps<FootItem>(), {
     }
   ],
   contacts: () => ({
-    email: 'admin@kye.com'
+    email: 'admin@kye.com',
+    phone: '17316565555'
   })
 })
 </script>
